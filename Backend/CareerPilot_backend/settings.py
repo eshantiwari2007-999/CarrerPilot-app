@@ -171,7 +171,8 @@ _cors_origins = os.environ.get(
 )
 CORS_ALLOWED_ORIGINS = [o.strip() for o in _cors_origins.split(",") if o.strip()]
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_ALL_ORIGINS = DEBUG  # In development, allow all origins
+CORS_ALLOW_ALL_ORIGINS = True  # Always allow frontend connections
+
 
 CORS_ALLOW_METHODS = [
     "DELETE",
@@ -199,6 +200,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://carrer-pilot-app.vercel.app",
 ]
 
 # ─────────────────────────────────────────
