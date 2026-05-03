@@ -29,7 +29,7 @@ DEBUG = os.environ.get("DEBUG", "False").lower() in ("true", "1", "yes")
 
 ALLOWED_HOSTS = [
     h.strip()
-    for h in os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+    for h in os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1,*").split(",")
     if h.strip()
 ]
 
