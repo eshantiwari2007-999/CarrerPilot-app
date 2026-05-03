@@ -1,0 +1,27 @@
+/* ── Global resets ────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  scroll-behavior: auto; /* instant so scrollTo(0,0) works immediately */
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+
+/* ── Skeleton shimmer animation ──────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.animate-shimmer {
+  animation: shimmer 1.6s ease-in-out infinite;
+}

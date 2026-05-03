@@ -1,0 +1,1 @@
+web: gunicorn CareerPilot_backend.wsgi
