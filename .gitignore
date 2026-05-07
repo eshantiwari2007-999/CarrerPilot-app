@@ -1,9 +1,100 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CareerPilot — .gitignore
+# Covers: React + Vite + TypeScript + Django + Python + Node.js + OS files
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Environment / Secrets ─────────────────────────────────────────────────────
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
 node_modules/
 dist/
+dist-ssr/
 build/
-.env
+.pnpm-store/
+*.local
+
+# Vite
+*.log
+vite-*.log
+vite-*.err.log
+
+# ── Python / Django ───────────────────────────────────────────────────────────
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Django
 db.sqlite3
+db.sqlite3-journal
 staticfiles/
 media/
+*.pot
+celerybeat-schedule
+celerybeat.pid
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+nosetests.xml
+*.cover
+
+# ── Build Artifacts ───────────────────────────────────────────────────────────
+*.zip
+*.tar.gz
+*.tar
+*.rar
+
+# Media files (large assets that don't belong in git)
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# ── Editors & IDEs ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*~
+
+# ── OS Files ─────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.bak
+*.tmp
+*.orig
+.cache/
